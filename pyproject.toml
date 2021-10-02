@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "programming_paradigm"
+version = "0.1.0"
+description = ""
+authors = ["Douglas Adams <douglasryanadams@gmail.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+fastapi = "^0.68.1"
+uvicorn = "^0.15.0"
+aiohttp = "^3.7.4"
+
+[tool.poetry.dev-dependencies]
+pytest = "^6.2.5"
+pytest-asyncio = "^0.15.1"
+mypy = "^0.910"
+black = "^21.9b0"
+pylint = "^2.11.1"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"

@@ -1,0 +1,15 @@
+[MESSAGES CONTROL]
+
+# Docstrings aren't needed for sample project
+# I don't care if classes only have 1 method in this example
+# Duplicates in this file and shape_alpha are because it's an example
+
+max-line-length=200
+disable=C0114,
+  C0115,
+  C0116,
+  R0801,
+  R0903
+
+[MASTER]
+extension-pkg-whitelist=pydantic
