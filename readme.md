@@ -1,4 +1,5 @@
-Welcome to this project that explores the difference between a functional paradigm and an object oriented paradigm using Python.
+Welcome to this project that explores the difference between a functional paradigm and an object oriented paradigm using
+Python.
 
 # Requirements
 
@@ -16,7 +17,6 @@ Shared goals:
 - Write clear code
 - Make testing easier
 
-
 # Shapes - Object-Oriented
 
 The Shapes API and implementation will follow object-oriented patterns.
@@ -27,10 +27,15 @@ It will use:
 - Factories
 - Dependency Injection
 
-
 # Colors - Functional
 
 It will use:
 
 - Modules with functions
 - Dynamically loaded implementations
+
+# Symbols - Single File
+
+It uses a single file to meet the requirements but closely couples everything (being that it's in the same file).
+
+Provided as an example to summarize the end-to-end implementation without the abstraction layers.

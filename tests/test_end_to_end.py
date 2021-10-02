@@ -4,6 +4,7 @@ from aiohttp import ClientSession
 
 from app.models.color import Color
 from app.models.shape import Shape
+from app.views.symbols import Symbol
 
 
 @pytest.fixture
@@ -54,3 +55,23 @@ async def test_write_color(client_session):
     async with client_session.post('http://localhost:8000/colors', json=color.dict()) as response:
         assert response.status == 200
         print(f'Write Shape Response: {await response.json()}')
+
+
+@pytest.mark.end_to_end
+@pytest.mark.asyncio
+async def test_read_symbol(client_session):
+    async with client_session.get('http://localhost:8000/symbols/Silcrow') as response:
+        assert response.status == 200
+        print(f'Read Symbol Response: {await response.json()}')
+
+
+@pytest.mark.end_to_end
+@pytest.mark.asyncio
+async def test_write_symbol(client_session):
+    symbol = Symbol(
+        name='NewSymbol',
+        value=33
+    )
+    async with client_session.post('http://localhost:8000/symbols', json=symbol.dict()) as response:
+        assert response.status == 200
+        print(f'Write Symbol Response: {await response.json()}')
