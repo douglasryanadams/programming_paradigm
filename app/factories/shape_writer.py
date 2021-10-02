@@ -1,7 +1,7 @@
 from typing import cast
 
 from app.backends.abstract_shapes import AbstractShapeWriter
-from app.backends.api_clients import AlphaClient, BetaClient
+from app.backends.shape_api_clients import AlphaClient, BetaClient
 from app.backends.shape_alpha import AlphaShapeWriter
 from app.backends.shape_beta import BetaShapeManager
 from app.factories.api_client import ApiClientFactory

@@ -21,8 +21,8 @@ class AlphaClient(Client):
         self._base_url = base_url
         self._session = session
 
-    async def get(self, name) -> Dict:
-        async with self._session.get(f'{self._base_url}/get', params={'client': 'alpha', 'name': name}) as response:
+    async def get(self, name: str) -> Dict:
+        async with self._session.get(f'{self._base_url}/get', params={'client': 'shape:alpha', 'name': name}) as response:
             assert response.status == 200  # Stand-in for actual error handling
             return await response.json()
 
@@ -39,7 +39,7 @@ class BetaClient(Client):
         self._session = session
 
     async def get(self, name) -> Dict:
-        async with self._session.get(f'{self._base_url}/get', params={'client': 'beta', 'name': name}) as response:
+        async with self._session.get(f'{self._base_url}/get', params={'client': 'shape:beta', 'name': name}) as response:
             assert response.status == 200
             return await response.json()
 

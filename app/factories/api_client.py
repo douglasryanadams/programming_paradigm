@@ -2,7 +2,7 @@ from typing import Union, Dict
 
 from aiohttp import ClientSession
 
-from app.backends.api_clients import BetaClient, AlphaClient
+from app.backends.shape_api_clients import BetaClient, AlphaClient
 
 
 class ApiClientFactory:

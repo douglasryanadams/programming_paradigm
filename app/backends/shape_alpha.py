@@ -1,5 +1,5 @@
 from app.backends.abstract_shapes import AbstractShapeReader, AbstractShapeWriter
-from app.backends.api_clients import AlphaClient
+from app.backends.shape_api_clients import AlphaClient
 from app.models.shape import Shape
 
 
